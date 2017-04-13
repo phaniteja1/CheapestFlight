@@ -1,0 +1,12 @@
+{
+  "name": "CheapestFlight",
+  "version": "0.0.1",
+  "main": "app.js",
+  "author": "Test",
+  "description": "For test ",
+  "dependencies": {
+    "express": "latest",
+    "osmosis": "1.1.4"
+  },
+  "license": "MIT"
+}
