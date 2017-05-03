@@ -1,0 +1,22 @@
+<input id="Out2A" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 663 $537 6:15AM depart 10:35AM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,486.31@K@ADT@KZBP@36.47@6@14.2@486.31@36.47@0@0@0@0,,3:20,663,DAL,LGA,6:15 AM,10:35 AM,0,WN,663,73W,-">
+<input id="swa_Out2A_productFareClass" class="productFareClass" type="hidden" value="K">
+<input id="Out2B" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 663 $512 6:15AM depart 10:35AM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,463.05@Y@ADT@YL@34.73@6@14.2@463.05@34.73@0@0@0@0,,3:20,663,DAL,LGA,6:15 AM,10:35 AM,0,WN,663,73W,-">
+<input id="swa_Out2B_productFareClass" class="productFareClass" type="hidden" value="Y">
+<input id="Out9A" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 734 $537 11:30AM depart 3:50PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,486.31@K@ADT@KZBP@36.47@3@14.2@486.31@36.47@0@0@0@0,,3:20,734,DAL,LGA,11:30 AM,3:50 PM,0,WN,734,73W,-">
+<input id="swa_Out9A_productFareClass" class="productFareClass" type="hidden" value="K">
+<input id="Out9B" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 734 $512 11:30AM depart 3:50PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,463.05@Y@ADT@YL@34.73@3@14.2@463.05@34.73@0@0@0@0,,3:20,734,DAL,LGA,11:30 AM,3:50 PM,0,WN,734,73W,-">
+<input id="swa_Out9B_productFareClass" class="productFareClass" type="hidden" value="Y">
+<input id="Out9C" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 734 $229 11:30AM depart 3:50PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,199.8@Q@ADT@QLN0RNR@14.99@1@14.2@199.8@14.99@0@0@0@0,,3:20,734,DAL,LGA,11:30 AM,3:50 PM,0,WN,734,73W,-">
+<input id="swa_Out9C_productFareClass" class="productFareClass" type="hidden" value="Q">
+<input id="Out12A" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 1529 $537 2:25PM depart 6:50PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,486.31@K@ADT@KZBP@36.47@8@14.2@486.31@36.47@0@0@0@0,,3:25,1529,DAL,LGA,2:25 PM,6:50 PM,0,WN,1529,73W,-">
+<input id="swa_Out12A_productFareClass" class="productFareClass" type="hidden" value="K">
+<input id="Out12B" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 1529 $512 2:25PM depart 6:50PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,463.05@Y@ADT@YL@34.73@8@14.2@463.05@34.73@0@0@0@0,,3:25,1529,DAL,LGA,2:25 PM,6:50 PM,0,WN,1529,73W,-">
+<input id="swa_Out12B_productFareClass" class="productFareClass" type="hidden" value="Y">
+<input id="Out12C" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 1529 $162 2:25PM depart 6:50PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,137.47@R@ADT@RLN0WNR@10.31@8@14.2@137.47@10.31@0@0@0@0,,3:25,1529,DAL,LGA,2:25 PM,6:50 PM,0,WN,1529,73W,-">
+<input id="swa_Out12C_productFareClass" class="productFareClass" type="hidden" value="R">
+<input id="Out15A" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 1677 $537 5:30PM depart 9:55PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,486.31@K@ADT@KZBP@36.47@4@14.2@486.31@36.47@0@0@0@0,,3:25,1677,DAL,LGA,5:30 PM,9:55 PM,0,WN,1677,73W,-">
+<input id="swa_Out15A_productFareClass" class="productFareClass" type="hidden" value="K">
+<input id="Out15B" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 1677 $512 5:30PM depart 9:55PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,463.05@Y@ADT@YL@34.73@4@14.2@463.05@34.73@0@0@0@0,,3:25,1677,DAL,LGA,5:30 PM,9:55 PM,0,WN,1677,73W,-">
+<input id="swa_Out15B_productFareClass" class="productFareClass" type="hidden" value="Y">
+<input id="Out15C" name="outboundTrip" class="upsellOutboundRadio js-bug-radiobutton" title="Departing flight 1677 $175 5:30PM depart 9:55PM arrive Nonstop" type="radio" value="2017 5 4,America/Chicago,149.56@W@ADT@WLN0WNR@11.22@1@14.2@149.56@11.22@0@0@0@0,,3:25,1677,DAL,LGA,5:30 PM,9:55 PM,0,WN,1677,73W,-">
+<input id="swa_Out15C_productFareClass" class="productFareClass" type="hidden" value="W">

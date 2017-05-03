@@ -6,7 +6,8 @@
   "description": "For test ",
   "dependencies": {
     "express": "latest",
-    "osmosis": "1.1.4"
+    "osmosis": "1.1.4",
+    "cheerio": "0.22.0"
   },
   "license": "MIT"
 }
