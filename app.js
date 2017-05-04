@@ -15,6 +15,8 @@ const flightTimes = {
   "evening":   "AFTER_6PM"
 }
 
+const flightDetailsOrder = ["flightno", "price", "depart", "arrive"];
+
 var i = 0;
 let wannaGetAwayPrices = [];
 
@@ -36,26 +38,23 @@ osmosis
     })
     
     .find('#faresOutbound .nonstop .product_info input')
-    .then((price) => {
-      // var priceMarkup = price.toString().match(/\$.*?(\d+)/)
-      // wannaGetAwayPrices.push(parseInt(priceMarkup[1]));
-      // price = price.toString();
-      // price = price.match(/title="([^']+)"/)[1];
-      wannaGetAwayPrices.push(price);
+    .then((flightInfo) => {
+      var totalFlightDetails = flightInfo.title;
+      var cleanedFlightDetails = '';
+      if (totalFlightDetails)
+        cleanedFlightDetails = totalFlightDetails.replace(/Departing flight |depart | arrive Nonstop/g , "");
+      if (cleanedFlightDetails){
+        var splitFlightDetails = cleanedFlightDetails.split(' ');
+        var jsonFied = splitFlightDetails.map((flightDetail, index) => {
+          return `"${flightDetailsOrder[index]}": "${flightDetail}"`;
+        });
+        wannaGetAwayPrices.push(`{${jsonFied}}`);
+      }
+
     })
     .set('flightResults')
   .done(function(result) {
-
-    
-    // console.log(filteredResult)
-
-    // console.log(i++)
-    console.log(wannaGetAwayPrices);
-    // wannaGetAwayPrices.forEach((price) => {
-    //   console.log(price);
-    // });
-    
-    fs.writeFile("test", wannaGetAwayPrices.join('\n'), function(err) {
+    fs.writeFile("test", `[${wannaGetAwayPrices}]`, function(err) {
         if(err) {
             return console.log(err);
         }
