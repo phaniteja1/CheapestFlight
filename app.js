@@ -15,6 +15,20 @@ const flightTimes = {
   "evening":   "AFTER_6PM"
 }
 
+var currentFlightModel = {
+  'flightno': '',
+  'price': '',
+  'depart': '',
+  'arrive': ''
+}
+
+var defaultFlightModel = {
+  'flightno': '',
+  'price': '',
+  'depart': '',
+  'arrive': ''
+}
+
 const flightDetailsOrder = ["flightno", "price", "depart", "arrive"];
 
 var i = 0;
@@ -32,7 +46,7 @@ osmosis
       // returnTimeOfDay: flightTimes["anytime"],
       // seniorPassengerCount: 0,
       fareType: "DOLLARS",
-      outboundDateString: "05/04/2017",
+      outboundDateString: "05/10/2017",
       // returnDateString: "04/20/2017",
       adultPassengerCount: "1",
     })
@@ -45,27 +59,42 @@ osmosis
         cleanedFlightDetails = totalFlightDetails.replace(/Departing flight |depart | arrive Nonstop/g , "");
       if (cleanedFlightDetails){
         var splitFlightDetails = cleanedFlightDetails.split(' ');
-        var jsonFied = splitFlightDetails.map((flightDetail, index) => {
-          return `"${flightDetailsOrder[index]}": "${flightDetail}"`;
+
+        Object.keys(currentFlightModel).forEach(function(key,index) {
+            currentFlightModel[key] = defaultFlightModel[key];
+            currentFlightModel[key] = splitFlightDetails[index];
         });
-        wannaGetAwayPrices.push(`{${jsonFied}}`);
+
+        // var jsonFied = splitFlightDetails.map((flightDetail, index) => {
+        //   return `${flightDetailsOrder[index]}": "${flightDetail}"`;
+        // }).join(', ');
+        wannaGetAwayPrices.push(currentFlightModel);
       }
 
     })
     .set('flightResults')
   .done(function(result) {
-    fs.writeFile("test", `[${wannaGetAwayPrices}]`, function(err) {
-        if(err) {
-            return console.log(err);
-        }
+    // fs.writeFile("flights.json", `[${wannaGetAwayPrices}]`, function(err) {
+    //     if(err) {
+    //         return console.log(err);
+    //     }
 
-        console.log("The file was saved!");
-    }); 
-    
+    //     console.log("The file was saved!");
+    // }); 
+
+  appendObject(wannaGetAwayPrices);
   })
 .log(console.log)
 .error(console.log)
 .debug(console.log)
+
+function appendObject(obj){
+  var configFile = fs.readFileSync('./flights.json');
+  var config = JSON.parse(configFile);
+  config.push.apply(config, obj);
+  var configJSON = JSON.stringify(config);
+  fs.writeFileSync('./flights.json', configJSON);
+}
 
 app.listen(3000, function() {
   console.log('listening');
